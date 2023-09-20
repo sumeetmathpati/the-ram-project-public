@@ -72,7 +72,7 @@ var points = [
 // Add layers
 layers = ["main", "forest", "forest_labels", "mountain", "mountain_labels", "river", "river_labels"]
 layers.forEach(element => {
-    L.tileLayer('/assets/images/tiles/' + element + '/{z}/{x}/{y}.png', {
+    L.tileLayer('{{site.baseurl}}/assets/images/tiles/' + element + '/{z}/{x}/{y}.png', {
         maxZoom: 5,
         noWrap: true,
     }).addTo(map);
@@ -83,7 +83,7 @@ var actualIconSize = [48, 48];
 var iconResizeFactor = 0.75
 var iconsizeToUse = [actualIconSize[0] * iconResizeFactor, actualIconSize[1] * iconResizeFactor]
 var flagIcon = L.icon({
-    iconUrl: '/assets/images/marker-flag.png',
+    iconUrl: '{{site.baseurl}}/assets/images/marker-flag.png',
     iconSize: iconsizeToUse, // size of the icon
     iconAnchor: [27 * iconResizeFactor, 48 * iconResizeFactor], // point of the icon which will correspond to marker's location
 });
